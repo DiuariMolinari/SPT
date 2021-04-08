@@ -1,0 +1,52 @@
+﻿@model IEnumerable<SPT.Models.Funcionario>
+
+@{
+    ViewData["Title"] = "Funcionários Cadastrados";
+}
+
+<h2>Funcionários Cadastrados</h2>
+
+<p>
+    <a asp-action="CriarFuncionario" class="btn btn-info">Cadastrar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
+            <th>
+                Ativo
+            </th>
+            <th>
+                Valor Hora
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorHora)
+            </td>
+            <td>
+                <a asp-action="AtualizarFuncionario" asp-route-id="@item.FuncionarioId" class="btn btn-primary">Editar</a> |
+                <a asp-action="ExcluirFuncionario" asp-route-id="@item.FuncionarioId" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
