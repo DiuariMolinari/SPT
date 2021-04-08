@@ -68,7 +68,7 @@ using SPT.Models;
             WriteLiteral("\r\n<h2>Funcionários Cadastrados</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(154, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f73fdd5e12b4eb0ace92c0917a7def7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fcb9068183d94c0d87c77ff21e0e3d08", async() => {
                 BeginContext(208, 9, true);
                 WriteLiteral("Cadastrar");
                 EndContext();
@@ -159,7 +159,7 @@ using SPT.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1126, 106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08424dca606f426baa86f44a2335db82", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e4dd3d45cc4e4634bb9699a277ffb879", async() => {
                 BeginContext(1222, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -195,7 +195,7 @@ using SPT.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1252, 104, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3de1efece5a402ea09f941e92c05250", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c8989d6eb5447fba63726350f50e62c", async() => {
                 BeginContext(1345, 7, true);
                 WriteLiteral("Excluir");
                 EndContext();

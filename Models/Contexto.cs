@@ -9,8 +9,8 @@ namespace SPT.Models
     public class Contexto : DbContext
     {
         public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<FolhaPagamento> FolhaPagamentos { get; set; }
 
-        public DbSet<Funcionario> FolhaPagamentos { get; set; }
 
         public Contexto(DbContextOptions<Contexto> opcoes) : base(opcoes)
         {
