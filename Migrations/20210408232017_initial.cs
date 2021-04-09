@@ -31,7 +31,7 @@ namespace SPT.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     FuncionarioId = table.Column<int>(nullable: false),
                     HorasTrabalhadas = table.Column<double>(nullable: false),
-                    Periodo = table.Column<double>(nullable: false)
+                    Periodo = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

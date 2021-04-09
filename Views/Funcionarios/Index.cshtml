@@ -1,14 +1,15 @@
 ﻿@model IEnumerable<SPT.Models.Funcionario>
 
 @{
-    ViewData["Title"] = "Funcionários Cadastrados";
+    ViewData["Title"] = "Funcionários";
 }
 
-<h2>Funcionários Cadastrados</h2>
+<h2>Funcionários</h2>
 
-<p>
-    <a asp-action="CriarFuncionario" class="btn btn-info">Cadastrar</a>
-</p>
+<td>
+    <a asp-action="CriarFuncionario" class="btn btn-info">Cadastrar Funcionário</a>
+    <a asp-controller="FolhaPagamento" asp-action="Index" class="btn btn-info">Folhas de Pagamento</a>
+</td>
 <table class="table">
     <thead>
         <tr>
@@ -28,25 +29,26 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cpf)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ValorHora)
-            </td>
-            <td>
-                <a asp-action="AtualizarFuncionario" asp-route-id="@item.FuncionarioId" class="btn btn-primary">Editar</a> |
-                <a asp-action="ExcluirFuncionario" asp-route-id="@item.FuncionarioId" class="btn btn-danger">Excluir</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cpf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorHora)
+                </td>
+                <td>
+                    <a asp-action="AtualizarFuncionario" asp-route-id="@item.FuncionarioId" class="btn btn-primary">Editar</a> |
+                    <a asp-action="ExcluirFuncionario" asp-route-id="@item.FuncionarioId" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

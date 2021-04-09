@@ -10,7 +10,7 @@ using SPT.Models;
 namespace SPT.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210408225324_initial")]
+    [Migration("20210408232017_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,7 +31,7 @@ namespace SPT.Migrations
 
                     b.Property<double>("HorasTrabalhadas");
 
-                    b.Property<double>("Periodo");
+                    b.Property<string>("Periodo");
 
                     b.HasKey("FolhaPagamentoId");
 

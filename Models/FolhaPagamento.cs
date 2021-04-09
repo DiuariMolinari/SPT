@@ -8,8 +8,9 @@ namespace SPT.Models
     public class FolhaPagamento
     {
         public int FolhaPagamentoId { get; set; }
+        public int FuncionarioId { get; set; }
         public Funcionario Funcionario { get; set; }
         public double HorasTrabalhadas { get; set; }
-        public double Periodo { get; set; }
+        public string Periodo { get; set; }
     }
 }

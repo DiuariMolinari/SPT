@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SPT.Models.FolhaPagamento>
+@using System.Collections.ObjectModel;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Folhas de Pagamento</h2>
+
+<p>
+    <a asp-action="CriarFolhaPagamento" class="btn btn-info">Cadastrar Folha de Pagamento</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HorasTrabalhadas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Periodo)
+            </th>
+            <th>
+                Salário Mensal
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Funcionario.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HorasTrabalhadas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Periodo)
+                </td>
+                <td>
+                    @(item.Funcionario.ValorHora * item.HorasTrabalhadas)
+                </td>
+                <td>
+                    <a asp-action="AtualizarFolhaPagamento" asp-route-id="@item.FolhaPagamentoId" class="btn btn-primary">Editar</a> |
+                    <a asp-action="ExcluirFolhaPagamento" asp-route-id="@item.FolhaPagamentoId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+<div style="text-align:center">
+    <td>
+        <Br><b>Total Gasto Mensal: @ViewBag.TotalGasto </b>
+    </td>
+</div>
+
+
+<div style="text-align:right">
+    <a asp-controller="Funcionarios" asp-action="Index" class="btn btn-default">Voltar</a>
+</div>
+

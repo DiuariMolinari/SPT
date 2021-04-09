@@ -1,0 +1,41 @@
+﻿@model SPT.Models.FolhaPagamento
+
+@{
+    ViewData["Title"] = "Atualizar Folha de Pagamento";
+}
+
+<h2>Atualizar Folha de Pagamento</h2>
+
+<h4>Folha de Pagamento</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AtualizarFolhaPagamento">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FolhaPagamentoId" />
+            <div class="form-group">
+                <label class="control-label">Funcionário</label>
+                @Html.DropDownListFor(m => m.FuncionarioId, ViewBag.Funcionarios as SelectList, " - selecione", new { @class = "form-control" })
+                <span asp-validation-for="FuncionarioId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HorasTrabalhadas" class="control-label"></label>
+                <input asp-for="HorasTrabalhadas" class="form-control" />
+                <span asp-validation-for="HorasTrabalhadas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Periodo" class="control-label"></label>
+                <input asp-for="Periodo" class="form-control" />
+                <span asp-validation-for="Periodo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-info" /> |
+                <a asp-action="Index" class="btn btn-default">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

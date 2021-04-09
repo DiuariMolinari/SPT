@@ -37,3 +37,7 @@ C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Funcionarios\Index.cs
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Funcionarios\CriarFuncionario.cshtml.g.cs
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Funcionarios\AtualizarFuncionario.cshtml.g.cs
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Funcionarios\ExcluirFuncionario.cshtml.g.cs
+C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\Index.cshtml.g.cs
+C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\CriarFolhaPagamento.cshtml.g.cs
+C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\AtualizarFolhaPagamento.cshtml.g.cs
+C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\ExcluirFolhaPagamento.cshtml.g.cs

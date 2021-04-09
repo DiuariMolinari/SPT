@@ -1,0 +1,33 @@
+﻿@model SPT.Models.FolhaPagamento
+
+@{
+    ViewData["Title"] = "Excluir Folha de Pagamento";
+}
+
+<h2>Excluir Folha de Pagamento</h2>
+
+<h3>Tem certeza que deseja fazer isso?</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HorasTrabalhadas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HorasTrabalhadas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Periodo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Periodo)
+        </dd>
+    </dl>
+
+    <form asp-action="ExcluirFolhaPagamento">
+        <input type="hidden" asp-for="FolhaPagamentoId" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-default">Voltar</a>
+    </form>
+</div>

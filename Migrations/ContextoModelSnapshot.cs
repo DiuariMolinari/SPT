@@ -29,7 +29,7 @@ namespace SPT.Migrations
 
                     b.Property<double>("HorasTrabalhadas");
 
-                    b.Property<double>("Periodo");
+                    b.Property<string>("Periodo");
 
                     b.HasKey("FolhaPagamentoId");
 
