@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Css\**" />
+    <Content Remove="Css\**" />
+    <EmbeddedResource Remove="Css\**" />
+    <None Remove="Css\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Migrations\20210408190233_SPT.cs" />
     <Compile Remove="Migrations\20210408190233_SPT.Designer.cs" />
     <Compile Remove="Migrations\20210408223713_initial.cs" />

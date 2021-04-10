@@ -88,12 +88,26 @@ namespace SPT.Controllers
         {
             if (id != null)
             {
-                _contexto.Remove(funcionario);
-                await _contexto.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    _contexto.Remove(funcionario);
+                    await _contexto.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception e)
+                {
+                    return RedirectToAction(nameof(Error));
+                }
             }
             else
                 return NotFound();
+        }
+
+        [HttpGet]
+        public IActionResult Error()
+        {
+            ViewBag.ErrorMessage = "Falha na exclusão! \r\nExistem registros vinculados a este Funcionário!";
+            return View();
         }
     }
 }

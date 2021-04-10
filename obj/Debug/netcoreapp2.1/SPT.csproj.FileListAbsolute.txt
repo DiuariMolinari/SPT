@@ -41,3 +41,4 @@ C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\Index.
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\CriarFolhaPagamento.cshtml.g.cs
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\AtualizarFolhaPagamento.cshtml.g.cs
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\ExcluirFolhaPagamento.cshtml.g.cs
+C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Funcionarios\Error.cshtml.g.cs
