@@ -73,7 +73,7 @@ using System.Collections.ObjectModel;
             WriteLiteral("\r\n<h2>Folhas de Pagamento</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(171, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "81292e6893c64422b0a8701bb3bddfa4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "53bf27db4533439f98e5e70fb6b39b5b", async() => {
                 BeginContext(228, 28, true);
                 WriteLiteral("Cadastrar Folha de Pagamento");
                 EndContext();
@@ -175,7 +175,7 @@ using System.Collections.ObjectModel;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1344, 112, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1013c0ef1f4b4b8ca51719200193dfd9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45289247531d4fd3ac1642e250ec6753", async() => {
                 BeginContext(1446, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -211,7 +211,7 @@ using System.Collections.ObjectModel;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1480, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a4b12ffea8cd44f69cedbc533367027d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1313233af86a45dc8df033a1aceb91c8", async() => {
                 BeginContext(1579, 6, true);
                 WriteLiteral("Delete");
                 EndContext();
@@ -265,7 +265,7 @@ using System.Collections.ObjectModel;
             WriteLiteral(" </b>\r\n    </td>\r\n</div>\r\n\r\n\r\n<div style=\"text-align:right\">\r\n    ");
             EndContext();
             BeginContext(1835, 86, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "870d263b0ee24c5e8a1372061670ee69", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4c222b761b4409aa72b6c48c681ed86", async() => {
                 BeginContext(1911, 6, true);
                 WriteLiteral("Voltar");
                 EndContext();

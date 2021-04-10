@@ -27,9 +27,11 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a asp-area="" asp-controller="Funcionarios" asp-action="Index" class="navbar-brand">SPT</a>
+                <a @*asp-area="" asp-controller="Funcionarios" asp-action="Index"*@ href="" class="navbar-brand">SIG</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">Sobre</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contatos</a></li>
                 </ul>
             </div>
