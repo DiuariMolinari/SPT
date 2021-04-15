@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SPT.Migrations
 {
-    public partial class initial : Migration
+    public partial class inital : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,7 +32,7 @@ namespace SPT.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     FuncionarioId = table.Column<int>(nullable: false),
                     HorasTrabalhadas = table.Column<double>(nullable: false),
-                    Periodo = table.Column<string>(nullable: false)
+                    Periodo = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -41,7 +42,7 @@ namespace SPT.Migrations
                         column: x => x.FuncionarioId,
                         principalTable: "Funcionarios",
                         principalColumn: "FuncionarioId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

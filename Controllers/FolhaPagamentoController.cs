@@ -19,17 +19,28 @@ namespace SPT.Controllers
             _contexto = contexto;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(DateTime minDate, DateTime maxDate)
         {
             double totalGasto = 0;
-            foreach (var folha in _contexto.FolhaPagamentos)
+            List<FolhaPagamento> folhas;
+            if (minDate != null && maxDate != null && minDate != DateTime.MinValue && maxDate != DateTime.MinValue)
+            {
+                folhas = await _contexto.FolhaPagamentos.Where(x => x.Periodo > minDate && x.Periodo < maxDate).ToListAsync();
+                ViewBag.minDate = minDate.ToString("yyyy-MM-dd");
+                ViewBag.maxDate = maxDate.ToString("yyyy-MM-dd");
+            }
+
+            else
+                folhas = await _contexto.FolhaPagamentos.ToListAsync();
+
+            foreach (var folha in folhas)
             {
                 folha.Funcionario = _contexto.Funcionarios.Find(folha.FuncionarioId);
                 totalGasto += folha.Funcionario.ValorHora * folha.HorasTrabalhadas;
             }
 
             ViewBag.TotalGasto = totalGasto;
-            return View(await _contexto.FolhaPagamentos.ToListAsync());
+            return View(folhas);
         }
 
         [HttpGet]

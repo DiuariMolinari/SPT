@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,6 +12,7 @@ namespace SPT.Models
         public int FuncionarioId { get; set; }
         public Funcionario Funcionario { get; set; }
         public double HorasTrabalhadas { get; set; }
-        public string Periodo { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime Periodo { get; set; }
     }
 }

@@ -1,0 +1,15 @@
+﻿.inputDate {
+    width: 20%;
+    display: inline;
+}
+.btnClose {
+    display: inline;
+}
+
+.totalGasto {
+    text-align: center;
+}
+
+.btnVoltar {
+    text-align: right;
+}

@@ -5,13 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Css\**" />
-    <Content Remove="Css\**" />
-    <EmbeddedResource Remove="Css\**" />
-    <None Remove="Css\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="Migrations\20210408190233_SPT.cs" />
     <Compile Remove="Migrations\20210408190233_SPT.Designer.cs" />
     <Compile Remove="Migrations\20210408223713_initial.cs" />
@@ -26,6 +19,10 @@
     <Compile Remove="Migrations\20210408224800_folhapagamnto.Designer.cs" />
     <Compile Remove="Migrations\20210408225324_initial.cs" />
     <Compile Remove="Migrations\20210408225324_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210408232017_initial.cs" />
+    <Compile Remove="Migrations\20210408232017_initial.Designer.cs" />
+    <Compile Remove="Migrations\20210414223527_initial.cs" />
+    <Compile Remove="Migrations\20210414223527_initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,11 +40,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-    <Folder Include="Views\NewFolder\" />
   </ItemGroup>
 
 </Project>

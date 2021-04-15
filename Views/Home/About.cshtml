@@ -2,17 +2,21 @@
     ViewData["Title"] = "Sobre";
 }
 
-<h2 style="text-align:center">@ViewData["Title"] </h2>
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/css/Home/About.css")">
+</head>
+<h2 class="titulo" >@ViewData["Title"] </h2>
 
 <h3>Tecnologias/Ferramentas usadas:</h3>
 <ul>
     <li title="Linguagem de programação">C#, ASP.NET Core MVC</li>
+    <li title="IDE">Visual Studio</li>
     <li title="Banco de dados">Sql Server</li>
-    <li title="Framework para geração do banco">Entity Framework</li>
+    <li title="Framework para geração do banco (Code first)">Entity Framework</li>
     <li title="Versionador de fontes">Git</li>
     <li>
         <a href="https://github.com/DiuariMolinari/SPT">GitHub</a>
     </li>
-    
+
 </ul>
 

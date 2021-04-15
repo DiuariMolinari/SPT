@@ -25,11 +25,11 @@ namespace SPT.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("FuncionarioId");
+                    b.Property<int>("FuncionarioId");
 
                     b.Property<double>("HorasTrabalhadas");
 
-                    b.Property<string>("Periodo");
+                    b.Property<DateTime>("Periodo");
 
                     b.HasKey("FolhaPagamentoId");
 
@@ -61,7 +61,8 @@ namespace SPT.Migrations
                 {
                     b.HasOne("SPT.Models.Funcionario", "Funcionario")
                         .WithMany()
-                        .HasForeignKey("FuncionarioId");
+                        .HasForeignKey("FuncionarioId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

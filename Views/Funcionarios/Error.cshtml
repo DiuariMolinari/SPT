@@ -1,5 +1,9 @@
-﻿<h1 style="text-align:center">Oops!</h1>
-<h2 style="color:red;text-align:center">@ViewBag.ErrorMessage</h2>
-<div style="text-align:center; padding-top: 30px">
+﻿<head>
+    <link rel="stylesheet" href="@Url.Content("~/css/Funcionarios/Error.css")">
+</head>
+
+<h1 class="ops">Oops!</h1>
+<h2 class="errorMessage">@ViewBag.ErrorMessage</h2>
+<div class="btnVoltar">
     <a asp-action="Index" class="btn btn-default">Voltar</a>
 </div>

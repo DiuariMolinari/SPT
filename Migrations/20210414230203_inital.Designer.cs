@@ -10,8 +10,8 @@ using SPT.Models;
 namespace SPT.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210408232017_initial")]
-    partial class initial
+    [Migration("20210414230203_inital")]
+    partial class inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,11 +27,11 @@ namespace SPT.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("FuncionarioId");
+                    b.Property<int>("FuncionarioId");
 
                     b.Property<double>("HorasTrabalhadas");
 
-                    b.Property<string>("Periodo");
+                    b.Property<DateTime>("Periodo");
 
                     b.HasKey("FolhaPagamentoId");
 
@@ -63,7 +63,8 @@ namespace SPT.Migrations
                 {
                     b.HasOne("SPT.Models.Funcionario", "Funcionario")
                         .WithMany()
-                        .HasForeignKey("FuncionarioId");
+                        .HasForeignKey("FuncionarioId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
