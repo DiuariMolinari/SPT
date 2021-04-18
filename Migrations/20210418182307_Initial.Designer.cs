@@ -10,8 +10,8 @@ using SPT.Models;
 namespace SPT.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210414230203_inital")]
-    partial class inital
+    [Migration("20210418182307_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -57,6 +57,23 @@ namespace SPT.Migrations
                     b.HasKey("FuncionarioId");
 
                     b.ToTable("Funcionarios");
+                });
+
+            modelBuilder.Entity("SPT.Models.Investimento", b =>
+                {
+                    b.Property<int>("InvestimentoId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("Periodo");
+
+                    b.Property<int>("TipoInvestimento");
+
+                    b.Property<double>("ValorInvestido");
+
+                    b.HasKey("InvestimentoId");
+
+                    b.ToTable("Investimentos");
                 });
 
             modelBuilder.Entity("SPT.Models.FolhaPagamento", b =>

@@ -1,0 +1,11 @@
+﻿.swal-wide {
+    width: 25% !important;
+    height: 95% !important;
+}
+.swal2-content {
+    font-size: 30px !important;
+}
+.h2, .swal2-title {
+    font-size: 35px !important;
+}
+

@@ -1,0 +1,45 @@
+﻿@model SPT.Models.Investimento
+
+<head>
+    <link href="~/css/Investimento/CriarInvestimento.css" rel="stylesheet" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"
+            crossorigin="anonymous"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript" src="~/js/Investimento/CriarInvestimento.js"></script>
+    <link href="~/css/Investimento/CriarInvestimento.css" rel="stylesheet" />
+</head>
+
+<h2>Simular Investimento</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CriarInvestimento">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label"> Valor do investido </label>
+                <input asp-for="ValorInvestido" class="form-control" id="valorInvestido" />
+                <span asp-validation-for="ValorInvestido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Período (Meses)</label>
+                <input asp-for="Periodo" class="form-control" id="periodo" />
+                <span asp-validation-for="Periodo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Opções de investimento</label>
+                <select asp-for="TipoInvestimento" class="form-control" asp-items="Html.GetEnumSelectList<TipoInvestimento>()"></select>
+                <span asp-validation-for="TipoInvestimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-info" /> |
+                <a asp-action="Index" class="btn btn-default">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+

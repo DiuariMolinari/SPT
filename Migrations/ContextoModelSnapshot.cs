@@ -57,6 +57,23 @@ namespace SPT.Migrations
                     b.ToTable("Funcionarios");
                 });
 
+            modelBuilder.Entity("SPT.Models.Investimento", b =>
+                {
+                    b.Property<int>("InvestimentoId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("Periodo");
+
+                    b.Property<int>("TipoInvestimento");
+
+                    b.Property<double>("ValorInvestido");
+
+                    b.HasKey("InvestimentoId");
+
+                    b.ToTable("Investimentos");
+                });
+
             modelBuilder.Entity("SPT.Models.FolhaPagamento", b =>
                 {
                     b.HasOne("SPT.Models.Funcionario", "Funcionario")

@@ -42,3 +42,7 @@ C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\CriarF
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\AtualizarFolhaPagamento.cshtml.g.cs
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\ExcluirFolhaPagamento.cshtml.g.cs
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Funcionarios\Error.cshtml.g.cs
+C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Investimento\CriarInvestimento.cshtml.g.cs
+C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Investimento\Index.cshtml.g.cs
+C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Investimento\AtualizarInvestimento.cshtml.g.cs
+C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Investimento\ExcluirInvestimento.cshtml.g.cs

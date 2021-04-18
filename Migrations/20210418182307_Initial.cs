@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SPT.Migrations
 {
-    public partial class inital : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -22,6 +22,21 @@ namespace SPT.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Funcionarios", x => x.FuncionarioId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Investimentos",
+                columns: table => new
+                {
+                    InvestimentoId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ValorInvestido = table.Column<double>(nullable: false),
+                    Periodo = table.Column<double>(nullable: false),
+                    TipoInvestimento = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Investimentos", x => x.InvestimentoId);
                 });
 
             migrationBuilder.CreateTable(
@@ -55,6 +70,9 @@ namespace SPT.Migrations
         {
             migrationBuilder.DropTable(
                 name: "FolhaPagamentos");
+
+            migrationBuilder.DropTable(
+                name: "Investimentos");
 
             migrationBuilder.DropTable(
                 name: "Funcionarios");

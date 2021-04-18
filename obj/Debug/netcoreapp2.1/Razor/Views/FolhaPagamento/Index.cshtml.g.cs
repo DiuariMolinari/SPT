@@ -77,7 +77,7 @@ using System.Collections.ObjectModel;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(130, 314, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "73580a7133af44f39d21853d30a4a9b3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9cb4b26c8a134762b77b81baa477d801", async() => {
                 BeginContext(136, 147, true);
                 WriteLiteral("\r\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\r\n    <link rel=\"stylesheet\"");
                 EndContext();
@@ -117,7 +117,7 @@ WriteAttributeValue("", 380, Url.Content("~/js/FolhaPagamento/Index.js"), 380, 4
             WriteLiteral("\r\n\r\n<h2>Folhas de Pagamento</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(489, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f116595af3e449dbfa02f7ebc6f543f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8193db9c2d244f11a2eb7710b744ffdc", async() => {
                 BeginContext(546, 28, true);
                 WriteLiteral("Cadastrar Folha de Pagamento");
                 EndContext();
@@ -140,7 +140,7 @@ WriteAttributeValue("", 380, Url.Content("~/js/FolhaPagamento/Index.js"), 380, 4
             WriteLiteral("\r\n</p>\r\n<table class=\"table\">\r\n    <thead>\r\n        ");
             EndContext();
             BeginContext(630, 705, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d322bfa20924da5b9c232444c74e5f8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6a82dd5e0fce48068c1b35758c71363a", async() => {
                 BeginContext(669, 136, true);
                 WriteLiteral("\r\n            <div class=\"form-group\">\r\n                <input class=\"form-control inputDate\" type=\"date\" data-val=\"true\" name=\"minDate\"");
                 EndContext();
@@ -274,7 +274,7 @@ WriteAttributeValue("", 952, ViewBag.maxDate, 952, 16, false);
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(2377, 112, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "25c5ab17fa5f42cd9083544f524dd9b7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e68ba0165bf42f58e6758e2f50ab8a1", async() => {
                 BeginContext(2479, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -310,7 +310,7 @@ WriteAttributeValue("", 952, ViewBag.maxDate, 952, 16, false);
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(2513, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "27433424d151465486346b67d910e486", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff39cc1c6a354de89dcd0db530c84a8c", async() => {
                 BeginContext(2612, 6, true);
                 WriteLiteral("Delete");
                 EndContext();
@@ -364,7 +364,7 @@ WriteAttributeValue("", 952, ViewBag.maxDate, 952, 16, false);
             WriteLiteral(" </b>\r\n    </td>\r\n</div>\r\n\r\n\r\n<div class=\"btnVoltar\">\r\n    ");
             EndContext();
             BeginContext(2854, 86, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a8fee835a2d54357870855876a4845ab", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "97ccf90c07fc43049661550ad0fe9e3d", async() => {
                 BeginContext(2930, 6, true);
                 WriteLiteral("Voltar");
                 EndContext();

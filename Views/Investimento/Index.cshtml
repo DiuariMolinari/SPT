@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SPT.Models.Investimento>
+
+<h2>Simulações de Investimentos</h2>
+
+<p>
+    <a asp-action="CriarInvestimento" class="btn btn-info">Simular Novo Investimento</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Valor do investimento
+            </th>
+            <th>
+                Período (Meses)
+            </th>
+            <th>
+                Opções de investimento
+            </th>
+            <th>
+                Valor Final
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorInvestido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Periodo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoInvestimento)
+                </td>
+                <td>
+                    @((ViewBag.valoresFinais as Dictionary<double, string>).FirstOrDefault(x => x.Key == item.InvestimentoId).Value)
+                </td>
+                <td>
+                    <a asp-action="AtualizarInvestimento" asp-route-id="@item.InvestimentoId" class="btn btn-primary">Editar</a> |
+                    <a asp-action="ExcluirInvestimento" asp-route-id="@item.InvestimentoId" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

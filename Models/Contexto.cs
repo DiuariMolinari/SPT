@@ -10,6 +10,7 @@ namespace SPT.Models
     {
         public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<FolhaPagamento> FolhaPagamentos { get; set; }
+        public DbSet<Investimento> Investimentos { get; set; }
 
 
         public Contexto(DbContextOptions<Contexto> opcoes) : base(opcoes)
