@@ -121,10 +121,17 @@ namespace SPT.Controllers
 
 
                 var maiorValor = aplicacoes.Values.Max();
+                var tipoInvestimento = aplicacoes.FirstOrDefault(x => x.Value == maiorValor).Key;
+                
+                string outrosInvestimentos = "";
+                foreach (var item in aplicacoes.Where(x => x.Value != maiorValor))
+                    outrosInvestimentos += $"\r\n{item.Key} = {item.Value.ToString("C")}";
+
                 var result = new
                 {
-                    tipoInvestimento = aplicacoes.FirstOrDefault(x => x.Value == maiorValor).Key,
-                    detalhesInvestimento = $"{maiorValor.ToString("C")}"
+                    tipoInvestimento = tipoInvestimento,
+                    detalhesInvestimento = $"{maiorValor.ToString("C")}",
+                    outrosInvestimentos = outrosInvestimentos,
                 };
 
                 return Json(result);

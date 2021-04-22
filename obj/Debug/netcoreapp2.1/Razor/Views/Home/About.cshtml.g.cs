@@ -59,7 +59,7 @@ using SPT.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(43, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "190a53fc38ae4d6e8f5d9d635a7fb237", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88ee1d71e0c046be96603905954fd1a9", async() => {
                 BeginContext(49, 28, true);
                 WriteLiteral("\r\n    <link rel=\"stylesheet\"");
                 EndContext();

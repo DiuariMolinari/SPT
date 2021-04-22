@@ -63,7 +63,7 @@ using SPT.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(0, 596, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "275272e32cf64c6a9e3052643fe813b7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "24a4ff02a7914450936919c9c60a873f", async() => {
                 BeginContext(6, 28, true);
                 WriteLiteral("\r\n    <link rel=\"stylesheet\"");
                 EndContext();
@@ -78,7 +78,7 @@ WriteAttributeValue("", 41, Url.Content("~/css/FolhaPagamento/IndexChart.css"), 
                 WriteLiteral(">\r\n    ");
                 EndContext();
                 BeginContext(100, 333, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af165b457c824dc59dbe1cd27d3959eb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75c5a836f1b84e4a9a2b2b63be1c15ee", async() => {
                     BeginContext(418, 6, true);
                     WriteLiteral("\r\n    ");
                     EndContext();
@@ -106,7 +106,7 @@ WriteAttributeValue("", 41, Url.Content("~/css/FolhaPagamento/IndexChart.css"), 
                 WriteLiteral("\r\n    <script src=\"https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js\"></script>\r\n    ");
                 EndContext();
                 BeginContext(530, 57, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "959a230b65c141eebb18be8bbb3eb392", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3203c15f6ed44757babe0f4095b5e063", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -139,12 +139,12 @@ WriteAttributeValue("", 41, Url.Content("~/css/FolhaPagamento/IndexChart.css"), 
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(600, 246, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3e7d3b95aa144689933374e47170317", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "48e89e0fa9d34dbfabf6181fb18bdca2", async() => {
                 BeginContext(606, 131, true);
                 WriteLiteral("\r\n    <h2>Gastos com Folhas de Pagamentos Por Mês</h2>\r\n    <canvas id=\"myChart\"></canvas>\r\n\r\n    <div class=\"btnVoltar\">\r\n        ");
                 EndContext();
                 BeginContext(737, 88, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e554856407224f56ae80104f1d42a05f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff3204e9bc234df2bf3833a5388f27ee", async() => {
                     BeginContext(815, 6, true);
                     WriteLiteral("Voltar");
                     EndContext();

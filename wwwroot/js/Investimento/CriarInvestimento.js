@@ -9,8 +9,8 @@
             console.log(data);
             Swal.fire({
                 icon: 'success',
-                title: `Melhor Investimento: <label style="color:lightgreen; padding-left: 10px;" > ${data.tipoInvestimento}</label>`,
-                text: `Valor ao final do período:     ${data.detalhesInvestimento}`,
+                title: `Melhor Investimento: <Br> <label style="color:lightgreen; padding-left: 15px;"> ${data.tipoInvestimento}</label> <Br> <Br> Valor ao final do período: <Br> <label style="color:lightgreen; padding-left: 15px;">${data.detalhesInvestimento}</label> <Br>  <Br>  <Br> Demais Investimentos: <label style="color:lightcoral; padding-left: 15px;">${data.outrosInvestimentos} </label>`,
+                text: "",
                 customClass: 'swal-wide'
             })
         },

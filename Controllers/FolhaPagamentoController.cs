@@ -25,7 +25,7 @@ namespace SPT.Controllers
             List<FolhaPagamento> folhas;
             if (minDate != null && maxDate != null && minDate != DateTime.MinValue && maxDate != DateTime.MinValue)
             {
-                folhas = await _contexto.FolhaPagamentos.Where(x => x.Periodo > minDate && x.Periodo < maxDate).ToListAsync();
+                folhas = await _contexto.FolhaPagamentos.Where(x => x.Periodo >= minDate && x.Periodo <= maxDate).ToListAsync();
                 ViewBag.minDate = minDate.ToString("yyyy-MM-dd");
                 ViewBag.maxDate = maxDate.ToString("yyyy-MM-dd");
             }

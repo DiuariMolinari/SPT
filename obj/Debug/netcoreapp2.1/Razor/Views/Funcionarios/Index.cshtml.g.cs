@@ -70,7 +70,7 @@ using SPT.Models;
             WriteLiteral("\r\n<h2>Funcionários</h2>\r\n\r\n<td>\r\n    ");
             EndContext();
             BeginContext(131, 79, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "663abbc98cec41b3b5219ce91feddeb3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3de2d02a0f1f475aa84a687cf8fe8ab0", async() => {
                 BeginContext(185, 21, true);
                 WriteLiteral("Cadastrar Funcionário");
                 EndContext();
@@ -93,7 +93,7 @@ using SPT.Models;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(216, 98, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bb3147476e7b4c5dbe261575b6e9de58", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "053b12d14963482dae39b5573d6c9aa5", async() => {
                 BeginContext(291, 19, true);
                 WriteLiteral("Folhas de Pagamento");
                 EndContext();
@@ -187,7 +187,7 @@ using SPT.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1297, 106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2a132ea712d44fc0b07cce2aa0434a2e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fb18dcaa8c9641e197671116f4cd5303", async() => {
                 BeginContext(1393, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -223,7 +223,7 @@ using SPT.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1427, 104, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ba54089ee7774b7d8a150ee9984f3c48", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d88c39e19e6042cd89dba56a32f54cb9", async() => {
                 BeginContext(1520, 7, true);
                 WriteLiteral("Excluir");
                 EndContext();

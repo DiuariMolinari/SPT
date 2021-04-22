@@ -56,7 +56,7 @@ using SPT.Models;
 #line default
 #line hidden
             BeginContext(44, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "010cedf8ed574863b7d810d414c2634f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b636a18c4a8a4624a77f5583ec3ebbc0", async() => {
                 BeginContext(50, 28, true);
                 WriteLiteral("\r\n    <link rel=\"stylesheet\"");
                 EndContext();
