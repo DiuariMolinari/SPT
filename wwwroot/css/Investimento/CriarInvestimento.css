@@ -3,9 +3,11 @@
     height: 95% !important;
 }
 .swal2-content {
-    font-size: 30px !important;
+    font-size: x-large !important;
+    font-family: Consolas;
 }
 .h2, .swal2-title {
-    font-size: 35px !important;
+    font-size: x-large !important;
+    font-family: Consolas;
 }
 

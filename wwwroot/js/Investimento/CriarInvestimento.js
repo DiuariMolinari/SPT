@@ -10,7 +10,7 @@
             Swal.fire({
                 icon: 'success',
                 title: `Melhor Investimento: <label style="color:lightgreen; padding-left: 10px;" > ${data.tipoInvestimento}</label>`,
-                text: data.detalhesInvestimento,
+                text: `Valor ao final do período:     ${data.detalhesInvestimento}`,
                 customClass: 'swal-wide'
             })
         },

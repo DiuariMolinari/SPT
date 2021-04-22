@@ -46,3 +46,4 @@ C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Investimento\CriarInv
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Investimento\Index.cshtml.g.cs
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Investimento\AtualizarInvestimento.cshtml.g.cs
 C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\Investimento\ExcluirInvestimento.cshtml.g.cs
+C:\Projetos\AspNet\SPT\obj\Debug\netcoreapp2.1\Razor\Views\FolhaPagamento\IndexChart.cshtml.g.cs

@@ -124,7 +124,7 @@ namespace SPT.Controllers
                 var result = new
                 {
                     tipoInvestimento = aplicacoes.FirstOrDefault(x => x.Value == maiorValor).Key,
-                    detalhesInvestimento = $"Valor ao final do período: {maiorValor.ToString("C")}"
+                    detalhesInvestimento = $"{maiorValor.ToString("C")}"
                 };
 
                 return Json(result);

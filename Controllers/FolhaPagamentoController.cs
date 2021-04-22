@@ -119,5 +119,38 @@ namespace SPT.Controllers
             else
                 return NotFound();
         }
+
+        public IActionResult IndexChart()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Chart()
+        {
+            var folhas = _contexto.FolhaPagamentos.ToList();
+            double totalGasto = 0;
+            Dictionary<string, double> valorPorPerido = new Dictionary<string, double>();
+
+            foreach (var folha in folhas)
+            {
+                folha.Funcionario = _contexto.Funcionarios.Find(folha.FuncionarioId);
+
+                var periodo = folha.Periodo.ToString("MMM/yyyy");
+                var valor = folha.Funcionario.ValorHora * folha.HorasTrabalhadas;
+                if (valorPorPerido.ContainsKey(periodo))
+                    valorPorPerido[periodo] += valor;
+                else
+                    valorPorPerido.Add(periodo, valor);
+            }
+
+            var result = new
+            {
+                labels = valorPorPerido.Keys.ToArray(),
+                values = valorPorPerido.Values.ToArray()
+            };
+
+            return Json(result);
+        }
     }
 }

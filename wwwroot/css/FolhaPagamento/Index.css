@@ -13,3 +13,11 @@
 .btnVoltar {
     text-align: right;
 }
+.btn-purple {
+    color: #ffffff;
+    background-color: mediumpurple;
+    border-color: mediumpurple;
+}
+.btn-purple :hover {
+    color: #ffffff;
+}

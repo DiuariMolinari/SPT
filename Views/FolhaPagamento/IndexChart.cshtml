@@ -1,0 +1,27 @@
+﻿<head>
+    <link rel="stylesheet" href="@Url.Content("~/css/FolhaPagamento/IndexChart.css")">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"
+            crossorigin="anonymous"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js"></script>
+    <script src="~/js/FolhaPagamento/IndexChart.js"></script>
+</head>
+
+<body>
+    <h2>Gastos com Folhas de Pagamentos Por Mês</h2>
+    <canvas id="myChart"></canvas>
+
+    <div class="btnVoltar">
+        <a asp-controller="FolhaPagamento" asp-action="Index" class="btn btn-default">Voltar</a>
+    </div>
+</body>
+
+
+
+
+
+
+
