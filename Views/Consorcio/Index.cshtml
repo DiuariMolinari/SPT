@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SPT.Models.Consorcio>
+
+<h2>Consórcios</h2>
+
+<p>
+    <a asp-action="CriarConsorcio" class="btn btn-primary">Criar Consórcio</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Segmento
+            </th>
+            <th>
+                Taxa de Seguro
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            <th>
+                Meses
+            </th>
+            <th>
+                Descrição
+            </th>
+            <th>
+                Valor da Carta
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeSegmento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxaSeguro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ativo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdMesPlano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoPlano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorCarta)
+            </td>
+            <td>
+                <a asp-action="AtualizarConsorcio" asp-route-id="@item.ConsorcioId" class="btn btn-info">Editar</a> |
+                <a asp-action="ExcluirConsorcio" asp-route-id="@item.ConsorcioId" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

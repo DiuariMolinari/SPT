@@ -1,0 +1,48 @@
+﻿@model SPT.Models.Consorcio
+
+<h2>Criar Consorcio</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CriarConsorcio">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Segmento</label>
+                <input asp-for="NomeSegmento" class="form-control" />
+                <span asp-validation-for="NomeSegmento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Taxa de Seguro</label>
+                <input asp-for="TaxaSeguro" class="form-control" />
+                <span asp-validation-for="TaxaSeguro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Meses</label>
+                <input asp-for="QtdMesPlano" class="form-control" />
+                <span asp-validation-for="QtdMesPlano" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Descricao do Plano</label>
+                <input asp-for="DescricaoPlano" class="form-control" />
+                <span asp-validation-for="DescricaoPlano" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Valor da Carta</label>
+                <input asp-for="ValorCarta" class="form-control" />
+                <span asp-validation-for="ValorCarta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-info" /> |
+                <a asp-action="Index" class="btn btn-default">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

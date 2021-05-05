@@ -19,6 +19,29 @@ namespace SPT.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("SPT.Models.Consorcio", b =>
+                {
+                    b.Property<int>("ConsorcioId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Ativo");
+
+                    b.Property<string>("DescricaoPlano");
+
+                    b.Property<string>("NomeSegmento");
+
+                    b.Property<int>("QtdMesPlano");
+
+                    b.Property<int>("TaxaSeguro");
+
+                    b.Property<int>("ValorCarta");
+
+                    b.HasKey("ConsorcioId");
+
+                    b.ToTable("Consorcios");
+                });
+
             modelBuilder.Entity("SPT.Models.FolhaPagamento", b =>
                 {
                     b.Property<int>("FolhaPagamentoId")

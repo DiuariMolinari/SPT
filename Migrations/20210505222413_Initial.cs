@@ -9,13 +9,31 @@ namespace SPT.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Consorcios",
+                columns: table => new
+                {
+                    ConsorcioId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    NomeSegmento = table.Column<string>(nullable: true),
+                    TaxaSeguro = table.Column<int>(nullable: false),
+                    Ativo = table.Column<bool>(nullable: false),
+                    QtdMesPlano = table.Column<int>(nullable: false),
+                    DescricaoPlano = table.Column<string>(nullable: true),
+                    ValorCarta = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Consorcios", x => x.ConsorcioId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Funcionarios",
                 columns: table => new
                 {
                     FuncionarioId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(nullable: false),
-                    Cpf = table.Column<string>(nullable: false),
+                    Nome = table.Column<string>(nullable: true),
+                    Cpf = table.Column<string>(nullable: true),
                     Status = table.Column<bool>(nullable: false),
                     ValorHora = table.Column<double>(nullable: false)
                 },
@@ -32,7 +50,7 @@ namespace SPT.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ValorInvestido = table.Column<double>(nullable: false),
                     Periodo = table.Column<double>(nullable: false),
-                    TipoInvestimento = table.Column<int>(nullable: true)
+                    TipoInvestimento = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,6 +86,9 @@ namespace SPT.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Consorcios");
+
             migrationBuilder.DropTable(
                 name: "FolhaPagamentos");
 
