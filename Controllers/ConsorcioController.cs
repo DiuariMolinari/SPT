@@ -19,7 +19,8 @@ namespace SPT.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _contexto.Consorcios.ToListAsync());
+            ViewBag.Consorcios = await _contexto.Consorcios.ToListAsync();
+            return View();
         }
 
         [HttpGet]

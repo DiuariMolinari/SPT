@@ -9,9 +9,6 @@
     <thead>
         <tr>
             <th>
-                ID
-            </th>
-            <th>
                 Segmento
             </th>
             <th>
@@ -30,32 +27,28 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in ViewBag.Consorcios)
-        {
+@foreach (var item in Model) {
         <tr>
             <td>
-                @item.ConsorcioId
+                @Html.DisplayFor(modelItem => item.NomeSegmento)
             </td>
             <td>
-                @item.NomeSegmento
+                @Html.DisplayFor(modelItem => item.TaxaSeguro)
             </td>
             <td>
-                @item.TaxaSeguro
+                @Html.DisplayFor(modelItem => item.QtdMesPlano)
             </td>
             <td>
-                @item.QtdMesPlano
+                @Html.DisplayFor(modelItem => item.DescricaoPlano)
             </td>
             <td>
-                @item.DescricaoPlano
-            </td>
-            <td>
-                @item.ValorCarta
+                @Html.DisplayFor(modelItem => item.ValorCarta)
             </td>
             <td>
                 <a asp-action="AtualizarConsorcio" asp-route-id="@item.ConsorcioId" class="btn btn-info">Editar</a> |
                 <a asp-action="ExcluirConsorcio" asp-route-id="@item.ConsorcioId" class="btn btn-danger">Excluir</a>
             </td>
         </tr>
-        }
+}
     </tbody>
 </table>

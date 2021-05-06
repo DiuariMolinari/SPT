@@ -10,7 +10,7 @@ using SPT.Models;
 namespace SPT.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210505222413_Initial")]
+    [Migration("20210506020532_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,8 +27,6 @@ namespace SPT.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("Ativo");
-
                     b.Property<string>("DescricaoPlano");
 
                     b.Property<string>("NomeSegmento");
@@ -41,7 +39,7 @@ namespace SPT.Migrations
 
                     b.HasKey("ConsorcioId");
 
-                    b.ToTable("Consorcios");
+                    b.ToTable("View_Consorcio");
                 });
 
             modelBuilder.Entity("SPT.Models.FolhaPagamento", b =>

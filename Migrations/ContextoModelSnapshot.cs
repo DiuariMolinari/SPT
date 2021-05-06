@@ -25,8 +25,6 @@ namespace SPT.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool>("Ativo");
-
                     b.Property<string>("DescricaoPlano");
 
                     b.Property<string>("NomeSegmento");
@@ -39,7 +37,7 @@ namespace SPT.Migrations
 
                     b.HasKey("ConsorcioId");
 
-                    b.ToTable("Consorcios");
+                    b.ToTable("View_Consorcio");
                 });
 
             modelBuilder.Entity("SPT.Models.FolhaPagamento", b =>
