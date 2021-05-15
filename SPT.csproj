@@ -5,26 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20210408190233_SPT.cs" />
-    <Compile Remove="Migrations\20210408190233_SPT.Designer.cs" />
-    <Compile Remove="Migrations\20210408223713_initial.cs" />
-    <Compile Remove="Migrations\20210408223713_initial.Designer.cs" />
-    <Compile Remove="Migrations\20210408223916_folhaPagamento.cs" />
-    <Compile Remove="Migrations\20210408223916_folhaPagamento.Designer.cs" />
-    <Compile Remove="Migrations\20210408224248_initial.cs" />
-    <Compile Remove="Migrations\20210408224248_initial.Designer.cs" />
-    <Compile Remove="Migrations\20210408224416_initial.cs" />
-    <Compile Remove="Migrations\20210408224416_initial.Designer.cs" />
-    <Compile Remove="Migrations\20210408224800_folhapagamnto.cs" />
-    <Compile Remove="Migrations\20210408224800_folhapagamnto.Designer.cs" />
-    <Compile Remove="Migrations\20210408225324_initial.cs" />
-    <Compile Remove="Migrations\20210408225324_initial.Designer.cs" />
-    <Compile Remove="Migrations\20210408232017_initial.cs" />
-    <Compile Remove="Migrations\20210408232017_initial.Designer.cs" />
-    <Compile Remove="Migrations\20210414223527_initial.cs" />
-    <Compile Remove="Migrations\20210414223527_initial.Designer.cs" />
-    <Compile Remove="Migrations\20210414230203_inital.cs" />
-    <Compile Remove="Migrations\20210414230203_inital.Designer.cs" />
+    <Compile Remove="Migrations\20210506020532_Initial.cs" />
+    <Compile Remove="Migrations\20210506020532_Initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

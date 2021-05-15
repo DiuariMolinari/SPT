@@ -9,6 +9,25 @@ namespace SPT.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Enderecos",
+                columns: table => new
+                {
+                    EnderecoId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Pais = table.Column<string>(nullable: true),
+                    Estado = table.Column<string>(nullable: true),
+                    Cidade = table.Column<string>(nullable: true),
+                    Bairro = table.Column<string>(nullable: true),
+                    Logradouro = table.Column<string>(nullable: true),
+                    Cep = table.Column<string>(nullable: true),
+                    Numero = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Enderecos", x => x.EnderecoId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Funcionarios",
                 columns: table => new
                 {
@@ -40,7 +59,7 @@ namespace SPT.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "View_Consorcio",
+                name: "View_Cons",
                 columns: table => new
                 {
                     ConsorcioId = table.Column<int>(nullable: false)
@@ -53,7 +72,28 @@ namespace SPT.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_View_Consorcio", x => x.ConsorcioId);
+                    table.PrimaryKey("PK_View_Cons", x => x.ConsorcioId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Pessoas",
+                columns: table => new
+                {
+                    PessoaId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Nome = table.Column<string>(nullable: true),
+                    DataNascimento = table.Column<DateTime>(nullable: false),
+                    EnderecoId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pessoas", x => x.PessoaId);
+                    table.ForeignKey(
+                        name: "FK_Pessoas_Enderecos_EnderecoId",
+                        column: x => x.EnderecoId,
+                        principalTable: "Enderecos",
+                        principalColumn: "EnderecoId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -81,6 +121,11 @@ namespace SPT.Migrations
                 name: "IX_FolhaPagamentos_FuncionarioId",
                 table: "FolhaPagamentos",
                 column: "FuncionarioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Pessoas_EnderecoId",
+                table: "Pessoas",
+                column: "EnderecoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -92,10 +137,16 @@ namespace SPT.Migrations
                 name: "Investimentos");
 
             migrationBuilder.DropTable(
-                name: "View_Consorcio");
+                name: "Pessoas");
+
+            migrationBuilder.DropTable(
+                name: "View_Cons");
 
             migrationBuilder.DropTable(
                 name: "Funcionarios");
+
+            migrationBuilder.DropTable(
+                name: "Enderecos");
         }
     }
 }

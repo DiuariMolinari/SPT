@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SPT.Models
 {
-    [Table("View_Cons")]
+    [Table("View_Consorcio")]
     public class Consorcio
     {
         public int ConsorcioId { get; set; }

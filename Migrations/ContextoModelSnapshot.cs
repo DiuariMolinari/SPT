@@ -37,7 +37,32 @@ namespace SPT.Migrations
 
                     b.HasKey("ConsorcioId");
 
-                    b.ToTable("View_Consorcio");
+                    b.ToTable("View_Cons");
+                });
+
+            modelBuilder.Entity("SPT.Models.Endereco", b =>
+                {
+                    b.Property<int>("EnderecoId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Bairro");
+
+                    b.Property<string>("Cep");
+
+                    b.Property<string>("Cidade");
+
+                    b.Property<string>("Estado");
+
+                    b.Property<string>("Logradouro");
+
+                    b.Property<string>("Numero");
+
+                    b.Property<string>("Pais");
+
+                    b.HasKey("EnderecoId");
+
+                    b.ToTable("Enderecos");
                 });
 
             modelBuilder.Entity("SPT.Models.FolhaPagamento", b =>
@@ -95,11 +120,38 @@ namespace SPT.Migrations
                     b.ToTable("Investimentos");
                 });
 
+            modelBuilder.Entity("SPT.Models.Pessoa", b =>
+                {
+                    b.Property<int>("PessoaId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DataNascimento");
+
+                    b.Property<int>("EnderecoId");
+
+                    b.Property<string>("Nome");
+
+                    b.HasKey("PessoaId");
+
+                    b.HasIndex("EnderecoId");
+
+                    b.ToTable("Pessoas");
+                });
+
             modelBuilder.Entity("SPT.Models.FolhaPagamento", b =>
                 {
                     b.HasOne("SPT.Models.Funcionario", "Funcionario")
                         .WithMany()
                         .HasForeignKey("FuncionarioId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("SPT.Models.Pessoa", b =>
+                {
+                    b.HasOne("SPT.Models.Endereco", "Endereco")
+                        .WithMany()
+                        .HasForeignKey("EnderecoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

@@ -12,7 +12,8 @@ namespace SPT.Models
         public DbSet<FolhaPagamento> FolhaPagamentos { get; set; }
         public DbSet<Investimento> Investimentos { get; set; }
         public DbSet<Consorcio> Consorcios { get; set; }
-
+        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; }
 
         public Contexto(DbContextOptions<Contexto> opcoes) : base(opcoes)
         {
