@@ -7,6 +7,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20210506020532_Initial.cs" />
     <Compile Remove="Migrations\20210506020532_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20210515124526_Initial.cs" />
+    <Compile Remove="Migrations\20210515124526_Initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,10 +26,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

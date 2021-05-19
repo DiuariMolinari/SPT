@@ -37,7 +37,7 @@ namespace SPT.Migrations
 
                     b.HasKey("ConsorcioId");
 
-                    b.ToTable("View_Cons");
+                    b.ToTable("View_Consorcio");
                 });
 
             modelBuilder.Entity("SPT.Models.Endereco", b =>
@@ -126,15 +126,13 @@ namespace SPT.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("DataNascimento");
+                    b.Property<string>("Cpf");
 
-                    b.Property<int>("EnderecoId");
+                    b.Property<DateTime>("DataNascimento");
 
                     b.Property<string>("Nome");
 
                     b.HasKey("PessoaId");
-
-                    b.HasIndex("EnderecoId");
 
                     b.ToTable("Pessoas");
                 });
@@ -144,14 +142,6 @@ namespace SPT.Migrations
                     b.HasOne("SPT.Models.Funcionario", "Funcionario")
                         .WithMany()
                         .HasForeignKey("FuncionarioId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("SPT.Models.Pessoa", b =>
-                {
-                    b.HasOne("SPT.Models.Endereco", "Endereco")
-                        .WithMany()
-                        .HasForeignKey("EnderecoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

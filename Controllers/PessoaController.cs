@@ -20,7 +20,7 @@ namespace SPT.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _contexto.Pessoas.Include(x => x.Endereco).ToListAsync());
+            return View(await _contexto.Pessoas.ToListAsync());
 
         }
 

@@ -15,7 +15,7 @@
                 Data de Nascimento
             </th>
             <th>
-                Endereço
+                Cpf
             </th>
             <th></th>
         </tr>
@@ -30,7 +30,7 @@
                 @Html.DisplayFor(modelItem => item.DataNascimento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Endereco.Cidade) - @Html.DisplayFor(modelItem => item.Endereco.Logradouro)
+                @Html.DisplayFor(modelItem => item.Cpf)
             </td>
             <td>
                 <a asp-action="AtualizarPessoa" asp-route-id="@item.PessoaId" class="btn btn-primary">Editar</a> |

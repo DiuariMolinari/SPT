@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SPT.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -59,7 +59,22 @@ namespace SPT.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "View_Cons",
+                name: "Pessoas",
+                columns: table => new
+                {
+                    PessoaId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Nome = table.Column<string>(nullable: true),
+                    DataNascimento = table.Column<DateTime>(nullable: false),
+                    Cpf = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pessoas", x => x.PessoaId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "View_Consorcio",
                 columns: table => new
                 {
                     ConsorcioId = table.Column<int>(nullable: false)
@@ -72,28 +87,7 @@ namespace SPT.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_View_Cons", x => x.ConsorcioId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Pessoas",
-                columns: table => new
-                {
-                    PessoaId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(nullable: true),
-                    DataNascimento = table.Column<DateTime>(nullable: false),
-                    EnderecoId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Pessoas", x => x.PessoaId);
-                    table.ForeignKey(
-                        name: "FK_Pessoas_Enderecos_EnderecoId",
-                        column: x => x.EnderecoId,
-                        principalTable: "Enderecos",
-                        principalColumn: "EnderecoId",
-                        onDelete: ReferentialAction.Cascade);
+                    table.PrimaryKey("PK_View_Consorcio", x => x.ConsorcioId);
                 });
 
             migrationBuilder.CreateTable(
@@ -121,15 +115,13 @@ namespace SPT.Migrations
                 name: "IX_FolhaPagamentos_FuncionarioId",
                 table: "FolhaPagamentos",
                 column: "FuncionarioId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Pessoas_EnderecoId",
-                table: "Pessoas",
-                column: "EnderecoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Enderecos");
+
             migrationBuilder.DropTable(
                 name: "FolhaPagamentos");
 
@@ -140,13 +132,10 @@ namespace SPT.Migrations
                 name: "Pessoas");
 
             migrationBuilder.DropTable(
-                name: "View_Cons");
+                name: "View_Consorcio");
 
             migrationBuilder.DropTable(
                 name: "Funcionarios");
-
-            migrationBuilder.DropTable(
-                name: "Enderecos");
         }
     }
 }
