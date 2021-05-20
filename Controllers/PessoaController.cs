@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SPT.Models;
@@ -41,6 +42,12 @@ namespace SPT.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(Pessoa);
+        }
+
+        [HttpPost]
+        public void CriarPessoaUpload(IEnumerable<IFormFile> DocumentPhotos)
+        {
+            var a = DocumentPhotos;
         }
 
         [HttpGet]

@@ -1,5 +1,9 @@
 ﻿@model SPT.Models.Pessoa
 
+<head>
+    <link rel="stylesheet" href="~/js/dropzone-5.7.0/dist/basic.css" />
+    <link rel="stylesheet" href="~/js/dropzone-5.7.0/dist/dropzone.css" />
+</head>
 <h2>Cadastrar Pessoa</h2>
 
 <hr />
@@ -22,9 +26,49 @@
                 <input asp-for="Cpf" class="form-control" />
                 <span asp-validation-for="Cpf" class="text-danger"></span>
             </div>
-                <input type="submit" value="Salvar" class="btn btn-info" /> |
-                <a asp-action="Index" class="btn btn-default">Voltar</a>
-            </div>
+            <input type="submit" value="Salvar" class="btn btn-info" /> |
+            <a asp-action="Index" class="btn btn-default">Voltar</a>
         </form>
     </div>
 </div>
+
+<form asp-action="CriarPessoaUpload" asp-controller="Pessoa" method="post" enctype="multipart/form-data" class="dropzone dz-clickable form-horizontal form-bordered" id="dropzoneForm">
+    <div class="form-group form-actions">
+        <div class="col-md-9 col-md-offset-4">
+            <button type="submit" id="submit" class="btn btn-sm btn-primary"><i class="fa fa-floppy-o"></i> Upload</button>
+        </div>
+    </div>
+</form>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+        asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+        asp-fallback-test="window.jQuery"
+        crossorigin="anonymous"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+</script>
+
+<script src="~/js/dropzone-5.7.0/dist/dropzone.js"></script>
+@*<script type="text/javascript" src="~/js/dropzone-5.7.0/dist/dropzone-amd-module.js"></script>*@
+
+
+@section Scripts
+    {
+    <script>
+        Dropzone.options.dropzoneForm = {
+            autoProcessQueue: false,
+            paramName: "DocumentPhotos", // The name that will be used to transfer the file
+            uploadMultiple: false,
+            init: function () {
+                var wrapperThis = this;
+                $("#submit").click(function (e) {
+                    e.preventDefault();
+                    wrapperThis.processQueue();
+                });
+            },
+            accept: function (file, done) {
+                done();
+            }
+        };
+
+    </script>
+    }
