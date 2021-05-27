@@ -26,19 +26,24 @@
                 <input asp-for="Cpf" class="form-control" />
                 <span asp-validation-for="Cpf" class="text-danger"></span>
             </div>
+
             <input type="submit" value="Salvar" class="btn btn-info" /> |
             <a asp-action="Index" class="btn btn-default">Voltar</a>
         </form>
+
+    </div>
+    <div class="col-md-1"> <b/>Ou </div>
+    <div class="col-md-4">
+        <h4 style="text-align:center">Importar Cadastro</h4>
+        <form asp-action="CriarPessoaUpload" asp-controller="Pessoa" method="post" enctype="multipart/form-data" class="dropzone dz-clickable form-horizontal form-bordered" id="dropzoneForm">
+            <div class="form-group form-actions">
+                <div class="col-md-9 col-md-offset-4">
+                    <button type="submit" id="submit" class="btn btn-sm btn-primary"><i class="fa fa-floppy-o"></i> Upload</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
-
-<form asp-action="CriarPessoaUpload" asp-controller="Pessoa" method="post" enctype="multipart/form-data" class="dropzone dz-clickable form-horizontal form-bordered" id="dropzoneForm">
-    <div class="form-group form-actions">
-        <div class="col-md-9 col-md-offset-4">
-            <button type="submit" id="submit" class="btn btn-sm btn-primary"><i class="fa fa-floppy-o"></i> Upload</button>
-        </div>
-    </div>
-</form>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
         asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
@@ -48,16 +53,15 @@
 </script>
 
 <script src="~/js/dropzone-5.7.0/dist/dropzone.js"></script>
-@*<script type="text/javascript" src="~/js/dropzone-5.7.0/dist/dropzone-amd-module.js"></script>*@
-
 
 @section Scripts
     {
     <script>
         Dropzone.options.dropzoneForm = {
             autoProcessQueue: false,
-            paramName: "DocumentPhotos", // The name that will be used to transfer the file
+            paramName: "DocumentPhotos",
             uploadMultiple: false,
+            acceptedFiles: ".txt",
             init: function () {
                 var wrapperThis = this;
                 $("#submit").click(function (e) {

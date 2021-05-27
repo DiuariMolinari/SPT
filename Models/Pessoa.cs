@@ -8,6 +8,16 @@ namespace SPT.Models
 {
     public class Pessoa
     {
+        public Pessoa()
+        {
+
+        }
+        public Pessoa(string nome, DateTime dataNascimento, string cpf)
+        {
+            this.Nome = nome;
+            this.DataNascimento = dataNascimento;
+            this.Cpf = cpf;
+        }
         public int PessoaId { get; set; }
 
         public string Nome { get; set; }
