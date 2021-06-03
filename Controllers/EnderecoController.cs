@@ -4,6 +4,8 @@ using SPT.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace SPT.Controllers
@@ -91,10 +93,31 @@ namespace SPT.Controllers
                 _contexto.Remove(Endereco);
                 await _contexto.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-                
+
             }
             else
                 return NotFound();
         }
+
+        //Exemplo de consumo de api com asp.net core
+        //No caso eu fiz com Js/Jquery
+
+        //public async Task<IActionResult> GetAddressByCep(string cep)
+        //{
+        //    Endereco endereco = new Endereco();
+        //    using (var client = new HttpClient())
+        //    {
+        //        client.BaseAddress = new Uri("https://api.postmon.com.br/");
+        //        client.DefaultRequestHeaders.Accept.Clear();
+        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        //        HttpResponseMessage response = await client.GetAsync($"v1/cep/{cep}");
+        //        if (response.IsSuccessStatusCode)
+        //        {
+        //            endereco = await response.Content.ReadAsAsync<Endereco>();
+        //        }
+        //    }
+
+        //    return Ok(endereco);
+        //}
     }
 }
