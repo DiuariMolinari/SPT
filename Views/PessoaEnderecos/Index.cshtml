@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SPT.Models.PessoaEnderecos>
+
+<h2>Endereços Vinculados</h2>
+
+<p>
+    <a asp-action="CriarPessoaEnderecos" class="btn btn-info">Vincular Endereço</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pessoa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pessoa.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endereco.Logradouro), @Html.DisplayFor(modelItem => item.Endereco.Numero)
+            </td>
+            <td>
+                <a asp-action="AtualizarPessoaEnderecos" class="btn btn-primary" asp-route-id="@item.PessoaEnderecosId">Editar</a> |
+                <a asp-action="ExcluirPessoaEnderecos" class="btn btn-danger" asp-route-id="@item.PessoaEnderecosId">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

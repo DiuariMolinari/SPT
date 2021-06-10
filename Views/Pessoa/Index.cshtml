@@ -4,6 +4,9 @@
 
 <p>
     <a asp-action="CriarPessoa" class="btn btn-info">Cadastrar Pessoa</a>
+    <a asp-controller="PessoaEnderecos" asp-action="CriarPessoaEnderecos" class="btn btn-warning">Vincular Endereços</a>
+    <a asp-controller="Consorcio" asp-action="index" class="btn btn-success">Vincular Consórcios</a>
+
 </p>
 <table class="table">
     <thead>
@@ -33,6 +36,8 @@
                 @Html.DisplayFor(modelItem => item.Cpf)
             </td>
             <td>
+                <a asp-controller="PessoaEnderecos" asp-action="index" class="btn btn-warning" asp-route-id="@item.PessoaId">Endereços</a> |
+                <a asp-controller="Consorcio" asp-action="index" class="btn btn-success" asp-route-id="@item.PessoaId">Consórcios</a>  |
                 <a asp-action="AtualizarPessoa" asp-route-id="@item.PessoaId" class="btn btn-primary">Editar</a> |
                 <a asp-action="ExcluirPessoa" asp-route-id="@item.PessoaId" class="btn btn-danger">Excluir</a>
             </td>

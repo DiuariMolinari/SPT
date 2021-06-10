@@ -10,8 +10,8 @@ using SPT.Models;
 namespace SPT.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210519223552_initial")]
-    partial class initial
+    [Migration("20210610220150_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,7 +39,7 @@ namespace SPT.Migrations
 
                     b.HasKey("ConsorcioId");
 
-                    b.ToTable("View_Consorcio");
+                    b.ToTable("Consorcios");
                 });
 
             modelBuilder.Entity("SPT.Models.Endereco", b =>
@@ -139,11 +139,43 @@ namespace SPT.Migrations
                     b.ToTable("Pessoas");
                 });
 
+            modelBuilder.Entity("SPT.Models.PessoaEnderecos", b =>
+                {
+                    b.Property<int>("PessoaEnderecosId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("EnderecoId");
+
+                    b.Property<int>("PessoaId");
+
+                    b.HasKey("PessoaEnderecosId");
+
+                    b.HasIndex("EnderecoId");
+
+                    b.HasIndex("PessoaId");
+
+                    b.ToTable("PessoaEnderecos");
+                });
+
             modelBuilder.Entity("SPT.Models.FolhaPagamento", b =>
                 {
                     b.HasOne("SPT.Models.Funcionario", "Funcionario")
                         .WithMany()
                         .HasForeignKey("FuncionarioId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("SPT.Models.PessoaEnderecos", b =>
+                {
+                    b.HasOne("SPT.Models.Endereco", "Endereco")
+                        .WithMany()
+                        .HasForeignKey("EnderecoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("SPT.Models.Pessoa", "Pessoa")
+                        .WithMany()
+                        .HasForeignKey("PessoaId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

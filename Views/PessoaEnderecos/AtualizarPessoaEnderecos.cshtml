@@ -1,0 +1,27 @@
+﻿@model SPT.Models.PessoaEnderecos
+
+<h2>Atualizar Vínculo de Endereco</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AtualizarPessoaEnderecos">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PessoaEnderecosId" />
+            <div class="form-group">
+                <label class="control-label">Pessoa</label>
+                @Html.DropDownListFor(m => m.PessoaId, ViewBag.Pessoas as SelectList, null, new { @class = "form-control" })
+                <span asp-validation-for="PessoaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Endereço</label>
+                @Html.DropDownListFor(m => m.EnderecoId, ViewBag.Enderecos as SelectList, null, new { @class = "form-control" })
+                <span asp-validation-for="EnderecoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-info" /> |
+                <a asp-action="Index" asp-controller="Pessoa" class="btn btn-default">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

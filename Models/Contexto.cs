@@ -14,6 +14,7 @@ namespace SPT.Models
         public DbSet<Consorcio> Consorcios { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<PessoaEnderecos> PessoaEnderecos { get; set; }
 
         public Contexto(DbContextOptions<Contexto> opcoes) : base(opcoes)
         {
