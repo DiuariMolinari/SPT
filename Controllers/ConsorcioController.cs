@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WcfService;
 
 namespace SPT.Controllers
 {
@@ -96,6 +97,24 @@ namespace SPT.Controllers
             }
             else
                 return NotFound();
+        }
+
+        [HttpGet]
+        public IActionResult GetValorParcela()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult GetValorParcela(double valorCarta, double taxa, int parcelas)
+        {
+            var valorParcela = new ConsorcioService().GetValorParcela(valorCarta, taxa, parcelas);
+            ViewBag.ValorCarta = valorCarta;
+            ViewBag.Taxa = taxa;
+            ViewBag.Parcelas = parcelas;
+            ViewBag.valorParcelas = valorParcela;
+
+            return View();
         }
     }
 }

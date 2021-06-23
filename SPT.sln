@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPT", "SPT.csproj", "{E24EDA69-F8A7-4164-A55E-5D4F92935B45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService", "..\WcfService\WcfService.csproj", "{8E9064E1-0EF7-45AF-8A05-5C93CC172AB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E24EDA69-F8A7-4164-A55E-5D4F92935B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E24EDA69-F8A7-4164-A55E-5D4F92935B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E24EDA69-F8A7-4164-A55E-5D4F92935B45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E9064E1-0EF7-45AF-8A05-5C93CC172AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E9064E1-0EF7-45AF-8A05-5C93CC172AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E9064E1-0EF7-45AF-8A05-5C93CC172AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E9064E1-0EF7-45AF-8A05-5C93CC172AB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

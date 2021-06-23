@@ -1,0 +1,33 @@
+﻿<h1>Calcular Valor Parcela</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="GetValorParcela">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Valor da Carta</label>
+                <input type="text" name="valorCarta" value ="@ViewBag.ValorCarta" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Taxa</label>
+                <input type="text" name="taxa" value ="@ViewBag.Taxa" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Quantidade de Parcelas</label>
+                <input type="text" name="parcelas" value ="@ViewBag.Parcelas" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">Valor Parcelas</label>
+                <input type="text" name="valorParcelas" value ="@ViewBag.ValorParcelas" readonly class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Calcular" class="btn btn-info" /> |
+                <a asp-action="Index" class="btn btn-default">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
