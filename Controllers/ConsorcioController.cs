@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WcfService;
+using Newtonsoft.Json;
 
 namespace SPT.Controllers
 {
@@ -115,6 +116,16 @@ namespace SPT.Controllers
             ViewBag.valorParcelas = valorParcela;
 
             return View();
+        }
+
+        [HttpGet]
+        public JsonResult GetConsorcios(double valorCarta, double taxa, int parcelas)
+        {
+            List<ResponseConsorcio> consorcios = new List<ResponseConsorcio>();
+            consorcios.Add(new ResponseConsorcio("Teste 1", "Carro 1", 10000, "Rua Amazonas", "89076869"));
+            consorcios.Add(new ResponseConsorcio("Teste 2", "Carro 2", 30000, "Rua Antônio da Veiga", "89576238"));
+
+            return Json(consorcios);
         }
     }
 }
